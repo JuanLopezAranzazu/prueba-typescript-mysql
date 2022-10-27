@@ -1,0 +1,35 @@
+GET http://localhost:3001/api/v1/customers
+
+###
+
+GET http://localhost:3001/api/v1/customers/1
+
+###
+
+POST http://localhost:3001/api/v1/customers
+Content-Type: application/json
+
+{
+  "fullname": "customer2",
+  "email": "customer2@gmail.com",
+  "contactNumber": "3187894542"
+}
+
+###
+
+GET http://localhost:3001/api/v1/payments
+
+###
+
+GET http://localhost:3001/api/v1/payments/1
+
+###
+
+POST http://localhost:3001/api/v1/payments
+Content-Type: application/json
+
+{
+  "value": 87090,
+  "date": "2022-10-21",
+  "customer": 2
+}
