@@ -29,7 +29,7 @@ paymentRouter.get(
       const paymentId: number = Number(params.id);
       paymentService.findOne(paymentId, (err: Error, payment: Payment) => {
         if (err) {
-          next(err);
+          throw err;
         }
         res.json({ data: payment });
       });
@@ -49,7 +49,7 @@ paymentRouter.post(
         newPaymentEntry,
         (err: Error, paymentId: number) => {
           if (err) {
-            next(err);
+            throw err;
           }
           res.status(201).json({ paymentId });
         }
